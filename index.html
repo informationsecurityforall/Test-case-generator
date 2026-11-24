@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101828"><title>RBAC Test Case Generator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar"><a class="brand" href="#"><span class="brand-icon">S</span>RBAC <span class="brand-light">Test Generator</span></a><span class="online">● Local generator</span></header>
+<main class="main">
+<section class="intro"><div class="eyebrow">ACCESS CONTROL VALIDATION</div><h1>Multiple test case generator</h1><p>Create multiple role-based access verification statements. Generate all reports together or copy each test case separately.</p></section>
+<section class="toolbar"><div><h2>Test cases</h2><p id="case-count">10 test cases</p></div><div class="toolbar-actions"><button class="secondary" id="add-row">＋ Add test case</button><button class="primary" id="generate-all">Generate all outputs</button></div></section>
+<div id="cases-list"></div>
+<footer>RBAC Test Case Generator <span>Runs in your browser · No data is uploaded or stored</span></footer>
+</main>
+<template id="case-template">
+<section class="case-card">
+<div class="case-head"><div><strong class="case-number">TEST CASE 1</strong> <span class="status">Not generated</span></div><button class="remove">Remove</button></div>
+<div class="fields">
+<div class="field roles"><label>Roles without access *</label><textarea class="roles-input" rows="3" placeholder="Enter one role per line&#10;Role 1&#10;Role 2"></textarea><small>Enter one role per line. Multiple roles supported.</small></div>
+<div class="field"><label>Tab name *</label><input class="tab-input" placeholder="e.g. Attachment"></div>
+<div class="field"><label>Role with Read + Write permission *</label><input class="authorized-input" placeholder="e.g. A"></div>
+</div>
+<div class="output-section" hidden><div class="output-title">GENERATED OUTPUT <small class="role-count"></small></div><article class="generated-output"></article><div class="copy-row"><button class="copy">Copy test case</button><span class="feedback" role="status"></span></div></div>
+<div class="generate-row"><button class="generate-one">Generate this test case</button></div>
+</section>
+</template>
+<script src="script.js"></script>
+</body></html>
